@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Cabecalho from "./Cabecalho";
+import Principal from "./Principal";
+import Rodape from "./Rodape";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  const [nomeUsuario, setNomeUsuario] = useState<string>('');
+
+ 
+  return <>
+    <Cabecalho texto={nomeUsuario}/>
+    <Principal nome={nomeUsuario} aoAlterarNome={setNomeUsuario}/>
+    <Rodape/>
+  </>;
 }
 
 export default App;
