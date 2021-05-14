@@ -1,2 +1,2 @@
-# PDM_REACT
+# useReducer
 Disciplina de Programação para dispositivos móveis
